@@ -1,5 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;400;700;900&family=Montserrat:wght@100;400&display=swap');
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gitHubIconMove {
+    0% {
+        bottom: -30px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
+
+@keyframes projectMoveFromLeft {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+
+
+:root {
+    --col1: #00004d;
+    --col2: #f46036;
+    --col3: #1b998b;
+    --col4: #710193;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Inter Tight, Arial, Helvetica, sans-serif;
+    
+}
+
+h1 {
+    font-size: calc(5vw + 1rem);
+}
+
+h3 {
+    font-size: calc(2.4vw + 0.9rem);
+}
+
+h4 {
+    font-size: calc(1.3rem + 0.5vw);
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: calc(0.15vw + 1rem);
+}
+
+p {
+    font-size: 1.1rem;
+    font-family: Work Sans;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+   overflow: hidden;
+    height: 100vh;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border-radius: 0 0 50% 50%;
+    scale: 1.5;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
+
+.hero-text h6 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+.hero-links {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.hero-link-img {
+    width: 32px;
+}
+
+.hero-link-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.underline {
+    width: 50px;
+    height: 5px;
+    background-color: var(--col1);
+    margin: auto; 
+    margin-top: 1.5rem;
+}
+
+.info-section {
+    /* background-color: yellow; */
+    padding: 5rem;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 900px) {
+    .info-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.info-section-heading {
+    /* background-color: red; */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-me .info-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-me .info-section-content p {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    flex-direction: row;
+}
+
+
+@media (max-width: 1300px) {
+    .projects-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects-content .project-box:nth-child(1) {
+    background: linear-gradient(-45deg, #696eff, #f8acff)
+}
+
+.projects-content .project-box:nth-child(2) {
+    background: linear-gradient(-45deg, #ff0f7b, #f89b29)
+}
+
+.projects-content .project-box:nth-child(3) {
+    background: linear-gradient(-45deg, #57ebde, #aefb2a)
+}
+
+.projects-content .project-box:nth-child(4) {
+    background: linear-gradient(-45deg, #0061ff, #60efff)
+}
+
+
+
+.project-box  {
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    animation: projectMoveFromLeft 1s ease;
+}
+
+.project-box img {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    display: none;
+    animation: gitHubIconMove 250ms ease;
+}
+
+.project-box img:hover {
+    cursor: pointer;
+}
+
+.project-box-title {
+    padding: 1rem;
+}
+
+.project-box-desc {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    line-height: 1.6rem;
+}
+
+.project-box:hover {
+    transform: scale(1.1);
+}
+
+.skills {
+}
+
+.skills .info-section-heading {
+    margin-bottom: 5rem;
+}
+
+.skills .info-section-heading p {
+    margin-top: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.skills .info-section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    column-gap: 1rem;
+    text-align: center;
+}
+
+.skill-section {
+}
+
+.skill-section-heading {
+    margin-bottom: 1rem;
+}
+
+.skill-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-box {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 8px #888888;
+    color: white;
+}
+
+.skills .info-section-content .skill-box:nth-child(even) {
+    background: linear-gradient(45deg, #0061ff,
+        #60efff );
+}
+
+.skills .info-section-content .skill-box:nth-child(odd) {
+    background: linear-gradient(45deg,#ff0f7b,
+        #f89b29);
+}
+
+.contact {
+    border: 2px orangered solid;
+    border-radius: 1rem;
+    width: max(50%, 300px);
+    margin: auto;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    width: max(50%, 300px);
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.form-element label {
+    font-size: calc(0.5vw + 1rem);
+    margin-bottom: 0.5rem;
+}
+
+.form-element input {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: solid 2.75px orange;
+    outline: none;
+}
+
+.footer {
+    background-color: black;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
+}
+
+.footer-text h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 2rem;
 }

@@ -6,8 +6,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/app.css" />
+    <script
+      type="text/javascript"
+      src="/scripts/project_hover_modal.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/intersection_observer.js"
+      defer
+    ></script>
   </head>
   <body>
-    <h1>Hello there</h1>
+    <div class="hero">
+      <div class="hero-text">
+        <h3>Hello there, my name is</h3>
+        <h1>Raj Pulapakura</h1>
+        <!-- <h6>My Portfolio</h6> -->
+      </div>
+
+      <div class="hero-links">
+        <a href="https://github.com/ajray4k" target="_blank">
+          <img class="hero-link-img" src="/assets/imgs/github.png" />
+        </a>
+        <a href="https://www.instagram.com/ajray.42/" target="_blank">
+          <img class="hero-link-img" src="/assets/imgs/instagram.png" />
+        </a>
+        <a href="https://twitter.com/ajray421" target="_blank">
+          <img class="hero-link-img" src="/assets/imgs/twitter.png" />
+        </a>
+      </div>
+    </div>
+
+    <div class="info-section about-me">
+      <div class="info-section-heading about-me-heading">
+        <h3>About Me</h3>
+        <!-- <div class="underline"></div> -->
+      </div>
+      <div class="info-section-content">
+        <p>
+          Hi, my name is Raj Pulapakura. I am a tech enthusiast ⚙️ as well as a
+          voracious athlete 🏃‍♂️ (unlikely combo!). I have been coding since the
+          age of 12 (I'm 14 as of today), and have ventured into various areas
+          of coding such as Web development 🖥️, App development 📱 and Machine
+          learning and AI 🧠.
+        </p>
+        <p>
+          My dream is to become a proficient programmer 💪 with a specialisation
+          in Machine Learning and Deep Learning. I love tackling challenging
+          problems and aspire to found a startup 🏢 in the near future.
+        </p>
+        <p>My hobbies include swimming, tennis, basketball and chess.</p>
+      </div>
+    </div>
+
+    <div class="info-section projects">
+      <div class="info-section-heading projects-heading">
+        <h3>Projects</h3>
+        <!-- <div class="underline"></div> -->
+      </div>
+      <div class="info-section-content projects-content">
+        <div class="project-box" data-project-name="numberPredictor">
+          <img src="assets/imgs/github_black.png" />
+          <h4 class="project-box-title">Number Predictor</h4>
+          <p class="project-box-desc">
+            Number Predictor is an android app that guesses your number from 1
+            to 30, using a smart counting algorithm. The first revision was
+            built purely with Kotlin (Android), but the second revision was
+            built with Flutter and Dart (cross-platform.)
+          </p>
+        </div>
+        <div class="project-box" data-project-name="ultraride">
+          <img src="assets/imgs/github_black.png" />
+          <h4 class="project-box-title">Ultraride</h4>
+          <p class="project-box-desc">
+            Ultraride is an ecommerce website that sells various shoes. It has
+            many features such as a search bar, filter and sort, advanced
+            animations, and a beautiful layout. It was built using React and
+            Typescript, along with a NodeJS backend API and GraphQL.
+          </p>
+        </div>
+        <div class="project-box" data-project-name="utilities">
+          <img src="assets/imgs/github_black.png" />
+          <h4 class="project-box-title">Utilities</h4>
+          <p class="project-box-desc">
+            I have built several utility packages (they are on npm!) such as
+            build-rest-api and build-graphql-api, which automatically generate
+            beautiful and expandable ready-made APIs.
+          </p>
+        </div>
+        <div class="project-box" data-project-name="chatto">
+          <img src="assets/imgs/github_black.png" />
+          <h4 class="project-box-title">Chatto</h4>
+          <p class="project-box-desc">
+            Chatto is a chat application where you can create rooms, invite
+            friends and chat together (basically a simpler version of discord).
+            This website was built using React, NodeJS, GraphQl, MySQL, Docker
+            and a few more technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section skills">
+      <div class="info-section-heading skills-heading">
+        <h3>Skills</h3>
+      </div>
+      <div class="info-section-content">
+        <div class="skill-section">
+          <h4 class="skill-section-heading">Languages</h4>
+          <div class="skill-section-content">
+            <div class="skill-box">
+              <h5>Python</h5>
+            </div>
+            <div class="skill-box">
+              <h5>HTML/CSS</h5>
+            </div>
+            <div class="skill-box">
+              <h5>JavaScript</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Typescript</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Go</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Dart</h5>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h4 class="skill-section-heading">Front End Tech</h4>
+          <div class="skill-section-content">
+            <div class="skill-box">
+              <h5>React</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Redux</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Chakra UI</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Django</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Flask</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-section">
+          <h4 class="skill-section-heading">App Development</h4>
+          <div class="skill-section-content">
+            <div class="skill-box">
+              <h5>Android - Kotlin</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Flutter</h5>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h4 class="skill-section-heading">Back End</h4>
+          <div class="skill-section-content">
+            <div class="skill-box">
+              <h5>NodeJS</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Express</h5>
+            </div>
+            <div class="skill-box">
+              <h5>MySQL</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Firebase</h5>
+            </div>
+            <div class="skill-box">
+              <h5>MongoDB</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-section">
+          <h4 class="skill-section-heading">Additional Tech</h4>
+          <div class="skill-section-content">
+            <div class="skill-box">
+              <h5>Docker</h5>
+            </div>
+            <div class="skill-box">
+              <h5>GraphQL</h5>
+            </div>
+            <div class="skill-box">
+              <h5>Git</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="info-section contact">
+      <div class="info-section-heading contact-heading">
+        <h3>Contact Me</h3>
+      </div>
+      <form class="info-section-content contact-form">
+        <div class="form-element">
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" />
+        </div>
+        <div class="form-element">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" />
+        </div>
+      </form>
+    </div> -->
+
+    <div class="footer">
+      <div class="footer-text">
+        <h4>
+          Thank you for checking out my portfolio! Hope to hear from you very
+          soon!
+        </h4>
+        <p>Message me through Instagram or email: raj.pulapakura@gmail.com</p>
+      </div>
+      <div class="footer-socials">
+        <img class="hero-link-img" src="/assets/imgs/github.png" />
+        <img class="hero-link-img" src="/assets/imgs/instagram_coloured.png" />
+        <img class="hero-link-img" src="/assets/imgs/twitter_coloured.png" />
+      </div>
+    </div>
   </body>
 </html>
